@@ -1,0 +1,77 @@
+.wave{
+    position: absolute;
+    top: -90px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(./imgs/Footer/wave.png);
+    background-size: 1000px 100px;
+    filter: blur(4px);
+}
+.wave.wave1{
+    animation: wave 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+}
+.wave.wave2{
+    animation: wave2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+}
+.wave.wave3{
+    animation: wave 30s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+}
+.wave.wave4{
+    animation: wave 15s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+}
+@keyframes wave {
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: 1000px;
+    }
+}
+@keyframes wave2{
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: -1000px;
+    }
+}
+
+.digitando-footer{
+    color: white;
+    border-right: 2px solid white;
+    animation: pisca 0.5s infinite normal, digit-footer 3s steps(7) 0.8s normal infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    font-style: italic;
+    font-size: 24px;
+}
+@keyframes digit-footer {
+    0%{
+        width: 0;
+    }
+    25%{
+        width: 50px;
+    }
+    50%{
+        width: 110px;
+    }
+    75%{
+        width: 110px;
+    }
+    100%{
+        width: 0px;
+    }
+}

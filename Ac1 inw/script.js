@@ -265,34 +265,33 @@ window.onload = () => {
 
     const sobreCada = [{
       h1text : "DJ",
-      href : ["https://www.instagram.com/ze.dio/", "https://www.linkedin.com/in/jos%C3%A9-d-33634b280", "https://www.instagram.com/ze.dio/", "https://github.com/ZeDio"],
+      link : ["https://www.instagram.com/ze.dio/", "https://www.linkedin.com/in/jos%C3%A9-d-33634b280", "https://www.instagram.com/ze.dio/", "https://github.com/ZeDio"],
       nome : ["Instagram", "linkdin", "instagram", "github"],
-      src :  ["./imgs/Footer/instagram.png", "./imgs/Footer/linkedin.png", "./imgs/Footer/whatsapp.png"]
+      source :  ["./imgs/Footer/instagram.png", "./imgs/Footer/linkedin.png", "./imgs/Footer/whatsapp.png", "./imgs/Footer/github.png"]
     },
     {
       h1text : "DL",
-      href : ["", "", "", ""],
+      link : ["","","",""],
       nome : ["Instagram", "linkdin", "instagram", "github"],
-      src :  ["./imgs/Footer/instagram.png", "./imgs/Footer/linkedin.png", "./imgs/Footer/whatsapp.png", "./imgs/Footer/github.png"]
+      source :  ["./imgs/Footer/instagram.png", "./imgs/Footer/linkedin.png", "./imgs/Footer/whatsapp.png", "./imgs/Footer/github.png"]
     }
   ]
 
     const footer = document.querySelector("footer")
     for(i = 1; i <= 4; i++){
       const div = document.createElement("div")
-      
       div.classList.add("wave")
       div.classList.add("wave"+[i])
       footer.appendChild(div)
     }
     sobreCada.forEach(sobreCada => {
       const div = document.createElement("div")
+      const divimages = document.createElement("div")
       const h1 = document.createElement("h1")
       const small = document.createElement("small")
 
       const h1text = document.createTextNode(sobreCada.h1text)
       const smalltext = document.createTextNode("- Contato")
-
       div.classList.add("sobreCada")
       h1.classList.add("digitando-footer")
 
@@ -301,13 +300,21 @@ window.onload = () => {
       h1.appendChild(small)
       div.appendChild(h1)
 
-      for(i = 0 ; i <= sobreCada.href.length; i++){
+      for(i = 0; i < 4 ; i++){
+      const a  = document.createElement("a")
+      const img = document.createElement("img")
 
+      img.classList.add("imgs-contato")
+
+      a.href = sobreCada.link[i]
+      img.src = sobreCada.source[i]
+      img.alt = sobreCada.nome[i]
+
+      a.appendChild(img)
+      divimages.appendChild(a)
       }
-
+      div.appendChild(divimages)
       footer.appendChild(div)
     });
-
-    console.log(sobreCada.href.length)
   }
 

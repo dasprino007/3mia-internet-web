@@ -5,6 +5,7 @@ window.onload = () => {
     apresentacao()
     habi()
     forms()
+    footer()
   };
   
   function header(){
@@ -260,4 +261,48 @@ window.onload = () => {
     main.appendChild(section)
   }
 
-  
+  function footer(){
+
+    const sobreCada = [{
+      h1text : "DJ"
+    },
+    {
+      h1text : "DL"
+    }
+  ]
+
+  const JoseSocias = 
+  [
+    {
+      href: "https://www.instagram.com/ze.dio/",
+      nome : "Instagram",
+      src : "./imgs/Footer/instagram.png"
+    },
+    {
+      href: "https://www.linkedin.com/in/jos%C3%A9-d-33634b280",
+      nome : "Linkdin",
+      src :  "./imgs/Footer/linkedin.png"
+    },
+    {
+      href: "https://www.instagram.com/ze.dio/",
+      nome : "Instagram",
+      src : "./imgs/Footer/whatsapp.png"
+    },
+    {
+      href: "https://github.com/ZeDio",
+      nome : "github",
+    }
+  ]
+
+    const footer = document.querySelector("footer")
+    for(i = 1; i <= 4; i++){
+      const div = document.createElement("div")
+      
+      div.classList.add("wave")
+      div.classList.add("wave"+[i])
+      
+      footer.appendChild(div)
+    }
+
+
+  }

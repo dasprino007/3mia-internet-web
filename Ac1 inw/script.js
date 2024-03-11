@@ -264,33 +264,16 @@ window.onload = () => {
   function footer(){
 
     const sobreCada = [{
-      h1text : "DJ"
+      h1text : "DJ",
+      href : ["https://www.instagram.com/ze.dio/", "https://www.linkedin.com/in/jos%C3%A9-d-33634b280", "https://www.instagram.com/ze.dio/", "https://github.com/ZeDio"],
+      nome : ["Instagram", "linkdin", "instagram", "github"],
+      src :  ["./imgs/Footer/instagram.png", "./imgs/Footer/linkedin.png", "./imgs/Footer/whatsapp.png"]
     },
     {
-      h1text : "DL"
-    }
-  ]
-
-  const JoseSocias = 
-  [
-    {
-      href: "https://www.instagram.com/ze.dio/",
-      nome : "Instagram",
-      src : "./imgs/Footer/instagram.png"
-    },
-    {
-      href: "https://www.linkedin.com/in/jos%C3%A9-d-33634b280",
-      nome : "Linkdin",
-      src :  "./imgs/Footer/linkedin.png"
-    },
-    {
-      href: "https://www.instagram.com/ze.dio/",
-      nome : "Instagram",
-      src : "./imgs/Footer/whatsapp.png"
-    },
-    {
-      href: "https://github.com/ZeDio",
-      nome : "github",
+      h1text : "DL",
+      href : ["", "", "", ""],
+      nome : ["Instagram", "linkdin", "instagram", "github"],
+      src :  ["./imgs/Footer/instagram.png", "./imgs/Footer/linkedin.png", "./imgs/Footer/whatsapp.png", "./imgs/Footer/github.png"]
     }
   ]
 
@@ -300,9 +283,31 @@ window.onload = () => {
       
       div.classList.add("wave")
       div.classList.add("wave"+[i])
-      
       footer.appendChild(div)
     }
+    sobreCada.forEach(sobreCada => {
+      const div = document.createElement("div")
+      const h1 = document.createElement("h1")
+      const small = document.createElement("small")
 
+      const h1text = document.createTextNode(sobreCada.h1text)
+      const smalltext = document.createTextNode("- Contato")
 
+      div.classList.add("sobreCada")
+      h1.classList.add("digitando-footer")
+
+      small.appendChild(smalltext)
+      h1.appendChild(h1text)
+      h1.appendChild(small)
+      div.appendChild(h1)
+
+      for(i = 0 ; i <= sobreCada.href.length; i++){
+
+      }
+
+      footer.appendChild(div)
+    });
+
+    console.log(sobreCada.href.length)
   }
+

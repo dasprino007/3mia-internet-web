@@ -4,6 +4,7 @@ function Filmes() {
     return ( 
         <>
         <h1>Filmes</h1>
+        <div>
         {
             data.map(
                 Filmes => (
@@ -14,6 +15,7 @@ function Filmes() {
                 )
             )
         }
+        </div>
         </>
      );
 }

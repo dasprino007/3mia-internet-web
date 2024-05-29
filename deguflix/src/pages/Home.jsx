@@ -3,12 +3,9 @@ import data from "../../artigo.json";
 function Home() {
   return (
     <>
-      <h1>home</h1>
-      <div>
+      <div className="flex flex-col items-center">
         {data.map((Filmes, index) => (
-          <div className="flex card p-2 m-2" key={index}>
-            <img className="p-1 m-1 object-scale-down" src={Filmes.image} />
-            <div className="flex-col">
+          <div className="flex flex-col items-center w-full" key={index}>
             <h1 className="p-1 m-1">{Filmes.title}</h1>
             <div className="m-1 tags">
                 {
@@ -17,8 +14,8 @@ function Home() {
                     ))
                 }
             </div>
-            <p key={Filmes.text} className="p-1 m-1 text-xs">{Filmes.text}</p>
-            </div>
+            <img width={"1200"} height={"675"} src={Filmes.image} />
+            <p key={Filmes.text} className="p-1 m-1 w-[50rem]">{Filmes.text}</p>
           </div>
         ))}
       </div>

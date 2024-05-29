@@ -4,7 +4,7 @@ function Filmes() {
     return ( 
         <>
         <h1>Filmes</h1>
-        <div>
+        <div className='flex flex-wrap'>
         {
             data.map(
                 Filmes => (

@@ -7,7 +7,7 @@ function Home() {
       <div>
         {data.map((Filmes, index) => (
           <div className="flex card p-2 m-2" key={index}>
-            <img className="p-1 m-1 object-scale-down" src={Filmes.image} />
+            <img className="relative object-cover p-1 m-1 aspect-16/9" src={Filmes.image} />
             <div className="flex-col">
             <h1 className="p-1 m-1">{Filmes.title}</h1>
             <div className="m-1 tags">

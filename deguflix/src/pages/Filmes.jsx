@@ -10,15 +10,15 @@ function Filmes() {
 
     return ( 
         <>      
-            <div className="listasFilmes flex flex-row flex-wrap">
+            <div className="listasFilmes flex flex-row flex-shrink overflow-x-auto">
                 {
                     filmes.map(
                         filme => (
                             <>
-                            <div className="card-filmes relative group h-sm w-fit" key={filme.id}>
+                            <div className="group-w-[30rem] card-filmes relative group" key={filme.id}>
                             <div className="invisible group-hover:visible absolute bottom-3 center">
-                                <h1 className="text-4xl text-wrap">{filme.title}</h1>
-                                <h2 className="text-2xl">Lançamento: {filme.date}</h2>
+                                <h1 className="text-wrap">{filme.title}</h1>
+                                <h2 className="">Lançamento: {filme.date}</h2>
                             </div>
                             <h2 className="invisible group-hover:visible absolute top-1 right-1">{Math.round((filme.vote_average)*10)}</h2>
                             <img className="group-hover:transition-opacity group-hover:opacity-30" src={`https://image.tmdb.org/t/p/w500/${filme.poster_path}`} alt="" />

@@ -11,7 +11,9 @@ export default {
         '4/3': '4 / 3'
       },
       colors: {
-        'primary-jose':'#034562',
+        'primary-color':'#000E1A',
+        'secondary-color':'#012340',
+        'third':'#0057A0'
       }
     },
   },

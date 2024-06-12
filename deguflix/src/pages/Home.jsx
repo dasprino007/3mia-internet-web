@@ -13,7 +13,7 @@ function Home() {
             <div className="m-1 tags">
                 {
                     Filmes.tags.map(tag =>(
-                        <span className=" p-1 m-1 text-white bg-red-600" key={tag}>{tag}</span>
+                        <span className=" p-1 m-1 text-white bg-third-color" key={tag}>{tag}</span>
                     ))
                 }
             </div>

@@ -13,15 +13,12 @@ function Heroimage() {
     },[])
 
     return ( 
-        <section className="HeroImage flex flex-row items-center justify-between">
-            <div className="flex flex-col">
-                <h1>{filmes.title}</h1>
-                <span>{filmes.release_date}</span>
-                <p>{filmes.overview}</p>
-            </div>
-            <div className="HeroImageImg aspect-16/9">
-                <img src={`https://image.tmdb.org/t/p/w500/${filmes.backdrop_path}`} alt="" />
-            </div>
+        <section className="HeroImage relative flex flex-row items-center justify-between mb-10">
+                <img className="aspect-16/9 w-[100wv]" src={`https://image.tmdb.org/t/p/original/${filmes.backdrop_path}`} alt="" />
+                <div className="HeroText flex flex-col p-6 justify-center absolute md:w-[32rem] sm:w-72 mobile:w-72 h-full bg-gradient-to-r via-100% from-primary-color">
+                    <h2>{filmes.title}</h2>
+                    <p className="sm:text-sm mobile:text-xs text-wrap">{filmes.overview}</p>
+                </div>
         </section>
      );
 }

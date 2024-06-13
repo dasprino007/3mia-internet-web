@@ -5,9 +5,9 @@ function NavBar() {
         <nav>
             <ul className='flex gap-3'>
                 <li className='hover:underline decoration-third-color'><Link to={"/"}>Home</Link></li>
-                <li><Link to={"filmes"}>filmes</Link></li>
-                <li><Link to={"sobre"}>sobre</Link></li>
-                <li><Link to={"contato"}>contato</Link></li>
+                <li className='hover:underline decoration-third-color'><Link to={"filmes"}>filmes</Link></li>
+                <li className='hover:underline decoration-third-color'><Link to={"sobre"}>sobre</Link></li>
+                <li className='hover:underline decoration-third-color'><Link to={"contato"}>contato</Link></li>
             </ul>
         </nav>
      );

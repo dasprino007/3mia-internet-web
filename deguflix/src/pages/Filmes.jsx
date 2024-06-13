@@ -1,7 +1,7 @@
-import { data } from "autoprefixer";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from 'react-router-dom'
+import Heroimage from "../componets/Filmes/heroImage";
 
 function Filmes() {
     const [filmes, setFilmes] = useState([])
@@ -11,7 +11,6 @@ function Filmes() {
         .then(response => setFilmes(response.results))
         .catch(error => console.error(error))
     },[])
-
     function ClassRate(data){
         if(data > 7){
             return('bg-GoodRate-color')
@@ -25,6 +24,7 @@ function Filmes() {
 
     return ( 
         <>  
+            <Heroimage/>
             <h2 className="mb-5 font-bold">Filmes populares</h2>
             <div className="listasFilmes flex overflow-x-auto gap-5">
                 {

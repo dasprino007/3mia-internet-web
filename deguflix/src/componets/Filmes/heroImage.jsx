@@ -15,9 +15,9 @@ function Heroimage() {
     return ( 
         <section className="HeroImage relative flex flex-row items-center justify-between mb-10">
                 <img className="aspect-16/9 w-[100wv]" src={`https://image.tmdb.org/t/p/original/${filmes.backdrop_path}`} alt="" />
-                <div className="HeroText flex flex-col p-6 justify-center absolute md:w-[32rem] sm:w-72 mobile:w-72 h-full bg-gradient-to-r via-100% from-primary-color">
+                <div className="HeroTexT max-w-full flex flex-col p-6 justify-center absolute h-full bg-gradient-to-r via-100% from-primary-color">
                     <h2>{filmes.title}</h2>
-                    <p className="sm:text-sm mobile:text-xs text-wrap">{filmes.overview}</p>
+                    <p className="md:w-[32rem] sm:w-72 mobile:w-72 sm:text-sm mobile:text-xs text-wrap">{filmes.overview}</p>
                 </div>
         </section>
      );

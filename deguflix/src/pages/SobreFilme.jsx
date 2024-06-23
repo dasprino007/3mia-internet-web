@@ -35,7 +35,6 @@ function SobreFilmes() {
         </div>
     </section>
 </div>
-    <Creditos/>
     </>
     );
 }

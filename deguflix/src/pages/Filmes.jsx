@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from 'react-router-dom'
 import Heroimage from "../componets/Filmes/heroImage";
+import ClassRate from "../system/ClassRate"
 
 function Filmes() {
     const [filmes, setFilmes] = useState([])
@@ -11,16 +12,6 @@ function Filmes() {
         .then(response => setFilmes(response.results))
         .catch(error => console.error(error))
     },[])
-    function ClassRate(data){
-        if(data > 7){
-            return('bg-GoodRate-color')
-        }
-        else if(data > 4){
-            return('bg-MediumRate-color')
-        }
-        else
-        return('bg-BadRate-color')
-    }
 
     return ( 
         <>  
@@ -31,7 +22,7 @@ function Filmes() {
                     filmes.map(
                         filme => (
                             <>
-                            <div className="card-filmes relative group group-hover:transition-opacity aspect-poster mobile:h-60 sm:min-h-72 md:min-h-80" key={filme.id}>
+                            <div className="card-filmes relative group group-hover:transition-opacity aspect-poster mobile:h-60 sm:min-h-72 md:min-h-80 my-5" key={filme.id}>
                             <Link to={`${filme.id}`}><img className="group-hover:opacity-30" src={`https://image.tmdb.org/t/p/w500/${filme.poster_path}`} alt="" /><img/></Link>
                             <div className="invisible group-hover:visible absolute bottom-3 left-1 center">
                                 <h1 className="text-wrap font-semibold">{filme.title}</h1>

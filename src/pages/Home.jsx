@@ -18,10 +18,10 @@ function Home() {
         <p className="md:w-[32rem] sm:w-full mobile:w-full">Assista a series e filmes que são bons ou fale que assitiu mas todo mundo sabe que voce so viu um resumo no youtube então assista aqui é de graça</p>
         <button type="button" className="py-2.5 px-5 me-2 mb-2 w-fit text-sm font-medium text-white focus:outline-none bg-third-color rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4">Assistir agora</button>
         <div className=" flex md:flex-row sm:flex-col mobile:flex-col justify-between">
-            <img className="aspect-poster h-[32rem] sm:mb-10 mobile:mb-10" src="/3homens_poster.jpg" alt="" />
-            <img className="aspect-poster h-[32rem] sm:mb-10 mobile:mb-10" src="/Hallowin_poster.jpg" alt="" />
-            <img className="aspect-poster h-[32rem] sm:mb-10 mobile:mb-10" src="/superman_poster.jpg" alt="" />
-            <img className="aspect-poster h-[32rem] sm:mb-10 mobile:mb-10" src="/robocop_poster.jpg" alt="" />
+            <img className="aspect-poster md:h-[23rem] sm:mb-10 mobile:mb-10" src="/3homens_poster.jpg" alt="" />
+            <img className="aspect-poster md:h-[23rem] sm:mb-10 mobile:mb-10" src="/Hallowin_poster.jpg" alt="" />
+            <img className="aspect-poster md:h-[23rem] sm:mb-10 mobile:mb-10" src="/superman_poster.jpg" alt="" />
+            <img className="aspect-poster md:h-[23rem] sm:mb-10 mobile:mb-10" src="/robocop_poster.jpg" alt="" />
         </div>
         </div>
         <div className="flex md:flex-row sm:flex-col mobile:flex-col justify-around items-center p-5">

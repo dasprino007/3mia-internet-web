@@ -15,9 +15,8 @@ function SobreFilmes() {
 
     return ( 
         <>
-<div className="relative">
-    <img className="bg-black opacity-30" src={`https://image.tmdb.org/t/p/original/${filme.backdrop_path}`} alt="" />
-        <section className="HeroImageSobreFilmes top-40 right-96 absolute flex flex-row p-10 justify-center items-center">
+        <section id="banner"  style={{ backgroundImage: `url("https://image.tmdb.org/t/p/original/${filme.backdrop_path}")`, backgroundPosition: 'center center'}} className="HeroImageSobreFilmes banner h-[100vh] flex flex-row p-10 justify-center items-center ImageSobreFilmes">
+        <div className="opac flex md:flex-row sm:flex-col mobile:flex-col justify-center items-center">
         <img className="aspect-poster h-[28rem]" src={`https://image.tmdb.org/t/p/w500/${filme.poster_path}`}></img>
         <div className="flex flex-col w-[40rem] mx-5">
             <h2 className="text-3xl font-bold">{filme.title}</h2>
@@ -30,11 +29,11 @@ function SobreFilmes() {
             <div className="size-3 bg-white rounded-full"></div>
             <p className=" font-light text-sm">Tempo de filme: {filme.runtime} min</p>
             </div>
-            <h3>sinopse:</h3>
+            <h3 className="text-xl font-bold">sinopse:</h3>
             <p>{filme.overview}</p>
         </div>
+        </div>
     </section>
-</div>
     </>
     );
 }

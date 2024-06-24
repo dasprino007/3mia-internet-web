@@ -26,8 +26,8 @@ export default {
         'BadRate-color': '#FF0014',
       },
       backgroundImage:{
-        'hero-pattern': "url('./public/upsell_br_hero1_weblandscape_2560x1280_052224.png')",
-        'halo-image': "url('./public/halo-season-1-3840x2160-22144.png')"
+        'hero-pattern': "url('/upsell_br_hero1_weblandscape_2560x1280_052224.png')",
+        'halo-image': "url('/halo-season-1-3840x2160-22144.png')"
       }
     },
   },

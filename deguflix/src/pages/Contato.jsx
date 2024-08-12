@@ -18,24 +18,24 @@ function Contato() {
             <form className="flex flex-col mb-5 gap-3" ref={form} onSubmit={sendEmail}>
             <div className="flex flex-col">
                     <label className="font-semibold" htmlFor="email">Email:</label>
-                    <input className=" bg-secondary-color rounded-md h-8 font-semibold text-md" type="text" name="email" id="email" />
+                    <input className=" bg-secondary-color rounded-md h-8 font-semibold text-md" type="text" name="email" id="email" required/>
                 </div>
                 <div className="flex flex-col">
                     <label className="font-semibold" htmlFor="nome">Nome:</label>
-                    <input className=" bg-secondary-color rounded-md h-8 font-semibold text-md" type="text" name="nome" id="nome" />
+                    <input className=" bg-secondary-color rounded-md h-8 font-semibold text-md" type="text" name="nome" id="nome" required/>
                 </div>
                 <div className="flex flex-col">
                     <label className="font-semibold" htmlFor="sobrenome">Sobrenome:</label>
-                    <input className=" bg-secondary-color rounded-md h-8 font-semibold text-md" type="text" name="sobrenome" id="sobrenome" />
+                    <input className=" bg-secondary-color rounded-md h-8 font-semibold text-md" type="text" name="sobrenome" id="sobrenome" required/>
                 </div>
                 <div className="flex flex-col">
                     <label className="font-semibold" htmlFor="nomeDoSeuCachorro">nome do seu cachorro:</label>
-                    <input className=" bg-secondary-color rounded-md h-8 font-semibold text-md" type="text" name="nomeDoSeuCachorro" id="nomeDoSeuCachorro" />
+                    <input className=" bg-secondary-color rounded-md h-8 font-semibold text-md" type="text" name="nomeDoSeuCachorro" id="nomeDoSeuCachorro" required/>
                     <span className=" text-sm font-thin">Se não tem um cachorro crie um nome</span>
                 </div>
                 <div className="flex flex-col">
                     <label className="font-semibold" htmlFor="descricao">descrição:</label>
-                    <textarea rows={15} cols={15} className=" bg-secondary-color rounded-md font-semibold text-md" name="descricao" id="descricao" />
+                    <textarea rows={15} cols={15} className=" bg-secondary-color rounded-md font-semibold text-md" name="descricao" id="descricao" required/>
                 </div>
                 <button type="submit" className="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-white focus:outline-none bg-third-color rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4">postar</button>
             </form>

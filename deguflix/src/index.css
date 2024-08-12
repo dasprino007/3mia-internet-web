@@ -12,3 +12,12 @@ body, html{
     position: absolute;
     background: rgba(0,0,0,0.5)
 }
+
+.caixa{
+    display: flex;
+    flex-direction: row;
+    width:max-content;
+}
+.caixa h1{
+    margin-right: 30px;
+}

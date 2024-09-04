@@ -1,0 +1,58 @@
+header{
+  background-color: red;
+  width: 100%;
+  height: 100px;
+}
+
+main{
+  display: flex;
+  flex-direction: row;
+}
+
+nav{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: blueviolet;
+  width: 200px;
+  height: 87vh;
+}
+
+.Card-Section{
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.column-do-jose{
+  display: grid;
+  grid-template-columns: repeat(4, 150px);
+  grid-column-gap: 80px;
+  grid-row-gap: 110px;
+}
+
+.card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  background-color: blue;
+  height: 150px;
+  width: 150px;
+}
+
+.nav-card{
+  background-color: white;
+  height: 150px;
+  width: 150px;
+}
+
+.container{
+  background-color: aqua;
+  width: 75px;
+  height: 40px;
+}

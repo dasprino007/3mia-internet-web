@@ -1,5 +1,10 @@
+:root{
+  --aside-width : 200px;
+  --main-width : calc(100% - var(--aside-width));
+}
+
 header{
-  background-color: red;
+  background-color: var(--primary-color);
   width: 100%;
   height: 100px;
 }
@@ -9,26 +14,26 @@ main{
   flex-direction: row;
 }
 
-nav{
+aside{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background-color: blueviolet;
-  width: 200px;
+  background-color: var(--secondary-color);
+  width: var(--aside-width);
   height: 87vh;
 }
 
-.Card-Section{
-  display: flex;
-  width: 90%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.main{
+  display: grid;
+  width: var(--main-width);
+  justify-items: center;
 }
 
 .column-do-jose{
   display: grid;
+  align-self: center;
+  justify-self: center;
   grid-template-columns: repeat(4, 150px);
   grid-column-gap: 80px;
   grid-row-gap: 110px;
@@ -40,19 +45,19 @@ nav{
   align-items: center;
   flex-direction: column;
   gap: 5px;
-  background-color: blue;
+  background-color: var(--third-color);
   height: 150px;
   width: 150px;
 }
 
 .nav-card{
-  background-color: white;
+  background-color: var(--forth-color);
   height: 150px;
   width: 150px;
 }
 
 .container{
-  background-color: aqua;
+  background-color: var(--forth-color);
   width: 75px;
   height: 40px;
 }

@@ -1,4 +1,4 @@
-function card(){
+function Card(){
     return(
         <div className="card">
             <div className="container"></div>
@@ -7,4 +7,4 @@ function card(){
     )
 }
 
-export default card
+export default Card

@@ -1,36 +1,18 @@
 import './App.css'
-import Card from './Card'
-import NavCard from './NavCard'
+import ConteudoPrincipal from './paginas/ConteudoPrincipal'
+import Sidebar from './components/Sidebar'
+import Header from './components/Header'
+import Container from './paginas/Container'
 
 function App() {
 
   return (
     <>
-      <header>
-      </header>
-      <main>
-        <nav>
-          <NavCard />
-          <NavCard />
-          <NavCard />
-        </nav>
-        <section className='Card-Section'>
-          <div className='column-do-jose'>
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-          </div>
-        </section>
-      </main>
+      <Header />
+      <Container>
+        <Sidebar />
+        <ConteudoPrincipal />
+      </Container>
     </>
   )
 }

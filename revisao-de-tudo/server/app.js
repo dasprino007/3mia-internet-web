@@ -2,6 +2,7 @@ import express from 'express';
 import conectarNaDB from "./db.js";
 import cors from 'cors';
 import artista from './Models/artista.js';
+import TransformNameToIndex from './post.js';
 
 const app = express()
 const conexao = await conectarNaDB();
@@ -30,7 +31,14 @@ app.get("/get/artistas/:index", async (req, res) => {
 })
 
 app.post("/post/artistas/:name", async (req, res) => {
-    
+    const name = decodeURIComponent(req.params.name)
+    const index = TransformNameToIndex(name)
+    const artist = new artista({"nome":name, "index":index})
+
+    await artist.save()
+    .then(() => {
+        res.status(200).send("pessoa foi salva")
+    })
 })
 
 app.listen(3000, () => {

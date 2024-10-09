@@ -1,22 +1,9 @@
-import Card from '../components/Card'
-
-function ConteudoPrincipal() {
+function ConteudoPrincipal({ children }) {
     return ( 
         <>
         <section className='main'>
             <div className='column-do-jose'>
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+                { children }
             </div>
         </section>
         </>
